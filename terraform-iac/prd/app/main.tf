@@ -2,9 +2,9 @@ terraform {
   required_version = "1.0.0"
 
   backend "s3" {
-    bucket         = "terraform-state-storage-539738229445"
-    dynamodb_table = "terraform-state-lock-539738229445"
-    key            = "hw-static-site-prd/app.tfstate"
+    bucket         = "terraform-state-storage-646364352403"
+    dynamodb_table = "terraform-state-lock-646364352403"
+    key            = "email-campaign-frontend-prd/app.tfstate"
     region         = "us-west-2"
   }
 
@@ -31,7 +31,7 @@ provider "aws" {
     tags = {
       env              = local.env
       data-sensitivity = "public"
-      repo             = "https://github.com/byu-oit/hw-static-site"
+      repo             = "https://github.com/byu-oit/email-campaign-frontend"
     }
   }
 }
